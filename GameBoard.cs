@@ -54,6 +54,7 @@ namespace BoggleSolver
                     break;
 
                 case WordDictionary.LookupResult.NoMatch:
+                    Letters[rowIndex, columnIndex] = nextChar;
                     return;
             }
 

@@ -8,6 +8,15 @@ namespace BoggleSolver
         {
             WordDictionary englishDictionary = WordDictionary.LoadWordDictionaryFromFile("english.txt");
 
+            for (int i = 0; i < 25; i++)
+                SolveGame(englishDictionary);
+
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+
+        private static void SolveGame(WordDictionary englishDictionary)
+        {
             Console.WriteLine("Game board:");
 
             char[,] letters = new char[4, 4];
@@ -32,8 +41,6 @@ namespace BoggleSolver
                 Console.WriteLine(solution);
 
             Console.WriteLine();
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
         }
     }
 }
